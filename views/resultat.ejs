@@ -7,6 +7,17 @@
     <title>Météo</title>
   </head>
   <body>
-    <p>bonjour</p>
+    <form action="/resultat.html" method="GET">
+      <input
+        id="search"
+        type="text"
+        name="ville"
+        placeholder="Cherchez une ville"
+      />
+      <button id="search_button" type="submit">Go</button>
+    </form>
+    <h1>Voici les données météorologiques de <b><%= ville%></b></h1>
+    <p>Température : <%= temperature%>°C</p>
+    <p>Résumé : <%= resume%></p>
   </body>
 </html>
