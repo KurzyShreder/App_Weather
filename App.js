@@ -10,4 +10,11 @@ app.get("/", function(req, res) {
   res.render("index.ejs");
 });
 
+app.get("/resultat.html", function(req, res) {
+  res.setHeader("Content-Type", "text/html");
+  const ville = querystring.parse(req.url).query;
+  console.log(ville);
+  res.render("resultat.ejs");
+});
+
 app.listen(8080);
